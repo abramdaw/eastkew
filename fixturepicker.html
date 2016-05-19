@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fixture Picker!</title>
+</head>
+<body>
+<h1>Our next game:</h1>
+<p id="match"></p>
+<p>Vs.</p>
+<p id="team"></p>
+<p>Venue</p>
+<p id="venue"></p>
+
+<script type="text/javascript">
+var today, endseason, text;
+today = new Date();
+
+endseason = new Date();
+endseason.setFullYear(2016, 9, 14);
+
+if (endseason > today) {
+	text = "Our next game:";
+} else {
+	text = "This year's season is over - enjoy the break and if you're looking to join a side, get in touch!"
+}
+
+var matches = [
+	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463788800000},
+	{when: "June 5 2016", versus: "St Albans Vukovar", venue: "Home", expires: 1464998400000},
+	{when: "June 19 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1465788800000},
+	{when: "June 26 2016", versus: "Dandenong Victory F.C.", venue: "Home", expires: 1465788800000},
+	{when: "July 3 2016", versus: "Albert Park Spiders", venue: "Away", expires: 1465788800000},
+	{when: "July 10 2016", versus: "NK Bunker", venue: "Home", expires: 1465788800000},
+	{when: "July 17 2016", versus: "Dandenong Youth United F.C.", venue: "Away", expires: 1465788800000},
+	{when: "July 31 2016", versus: "H.N.K. Mostar Saints", venue: "Home", expires: 1465788800000},
+	{when: "August 7 2016", versus: "St Albans Gospic Bears", venue: "Away", expires: 1465788800000},
+	{when: "August 21 2016", versus: "St Albans Vukovar", venue: "Away", expires: 1465788800000},
+	];
+
+var utctoday = Date.now();
+console.log(utctoday);
+
+for (var i=0; i < matches.length; i++){
+
+	if (utctoday < matches[i].expires) {
+		document.getElementById("match").innerHTML = matches[i].when;
+		document.getElementById("team").innerHTML = matches[i].versus;
+		document.getElementById("venue").innerHTML = matches[i].venue;
+		break;
+	} else {
+		document.getElementById("match").innerHTML = "Error";
+		document.getElementById("team").innerHTML = "Error";
+		document.getElementById("venue").innerHTML = "Error";
+	};
+}
+</script>
+</body>
+</html>
