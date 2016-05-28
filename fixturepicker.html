@@ -11,6 +11,13 @@
 <p>Venue</p>
 <p id="venue"></p>
 
+<p>for the date:</p>
+<p id="date"></p>
+<p>This is the UTC date</p>
+<p id="UTCdate"></p>
+
+<p>And the over 35s team play <span id="35versus"></span> on <span id="35date"></span> at <span id="35venue"></span>.</p>
+
 <script type="text/javascript">
 var today, endseason, text;
 today = new Date();
@@ -25,16 +32,16 @@ if (endseason > today) {
 }
 
 var matches = [
-	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463788800000},
-	{when: "June 5 2016", versus: "St Albans Vukovar", venue: "Home", expires: 1464998400000},
-	{when: "June 19 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1465788800000},
-	{when: "June 26 2016", versus: "Dandenong Victory F.C.", venue: "Home", expires: 1465788800000},
-	{when: "July 3 2016", versus: "Albert Park Spiders", venue: "Away", expires: 1465788800000},
-	{when: "July 10 2016", versus: "NK Bunker", venue: "Home", expires: 1465788800000},
-	{when: "July 17 2016", versus: "Dandenong Youth United F.C.", venue: "Away", expires: 1465788800000},
-	{when: "July 31 2016", versus: "H.N.K. Mostar Saints", venue: "Home", expires: 1465788800000},
-	{when: "August 7 2016", versus: "St Albans Gospic Bears", venue: "Away", expires: 1465788800000},
-	{when: "August 21 2016", versus: "St Albans Vukovar", venue: "Away", expires: 1465788800000},
+	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463925600000},
+	{when: "June 5 2016", versus: "St Albans Vukovar", venue: "Home", expires: 1465135200000},
+	{when: "June 19 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1466344800000},
+	{when: "June 26 2016", versus: "Dandenong Victory F.C.", venue: "Home", expires: 1466949600000},
+	{when: "July 3 2016", versus: "Albert Park Spiders", venue: "Away", expires: 1467554400000},
+	{when: "July 10 2016", versus: "NK Bunker", venue: "Home", expires: 1468159200000},
+	{when: "July 17 2016", versus: "Dandenong Youth United F.C.", venue: "Away", expires: 1468764000000},
+	{when: "July 31 2016", versus: "H.N.K. Mostar Saints", venue: "Home", expires: 1469973600000},
+	{when: "August 7 2016", versus: "St Albans Gospic Bears", venue: "Away", expires: 1470578400000},
+	{when: "August 21 2016", versus: "St Albans Vukovar", venue: "Away", expires: 1471788000000},
 	];
 
 var utctoday = Date.now();
@@ -53,6 +60,43 @@ for (var i=0; i < matches.length; i++){
 		document.getElementById("venue").innerHTML = "Error";
 	};
 }
+
+var datetocheck = new Date(2016,7,22)
+document.getElementById("date").innerHTML = datetocheck;
+var UTCdate = datetocheck.getTime();
+document.getElementById("UTCdate").innerHTML = UTCdate;
+
+var thirtymatches = [
+	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463925600000},
+	{when: "June 5 2016", versus: "South Park Rangers", venue: "Home", expires: 1465135200000},
+	{when: "June 19 2016", versus: "Maidstone United F.C.", venue: "Away", expires: 1466344800000},
+	{when: "June 26 2016", versus: "Alphington", venue: "Away", expires: 1466949600000},
+	{when: "July 3 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1467554400000},
+	{when: "July 10 2016", versus: "Thornbury United", venue: "Home", expires: 1468159200000},
+	{when: "July 17 2016", versus: "South Park Rangers", venue: "Away", expires: 1468764000000},
+	{when: "July 31 2016", versus: "Maidstone United F.C.", venue: "Home", expires: 1469973600000},
+	{when: "August 7 2016", versus: "Alphington", venue: "Away", expires: 1470578400000},
+	{when: "August 14 2016", versus: "Thornbury United", venue: "Home", expires: 1469973600000},
+	{when: "August 21 2016", versus: "Maidstone United F.C.", venue: "Away", expires: 1471788000000},
+	];
+
+var utctoday = Date.now();
+console.log(utctoday);
+
+for (var i=0; i < thirtymatches.length; i++){
+
+	if (utctoday < thirtymatches[i].expires) {
+		document.getElementById("35date").innerHTML = thirtymatches[i].when;
+		document.getElementById("35versus").innerHTML = thirtymatches[i].versus;
+		document.getElementById("35venue").innerHTML = thirtymatches[i].venue;
+		break;
+	} else {
+		document.getElementById("35date").innerHTML = "Error";
+		document.getElementById("35versus").innerHTML = "Error";
+		document.getElementById("35venue").innerHTML = "Error";
+	};
+}
+
 </script>
 </body>
 </html>

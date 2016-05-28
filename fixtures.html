@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel = "stylesheet" href = "css/reset.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel = "stylesheet" href = "css/style.css"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="bigSlide.js" type="text/javascript" charset="utf-8"></script>
 	<title>Fixtures page - East Kew United</title>
 	<meta name="description" content="East Kew United Football Club Home Page">
 	<meta name="keywords" content="east,kew,united,football,club,soccer,melbourne">
@@ -14,15 +15,19 @@
 <body>
 <div class="container">
 	<header>
+		<div class="cf" id="mobileMenuBtn">
+				<a href="#" class="menu-link"><img src="images/menu.jpg" id="menulogo" style="width: 20%;float: left;padding: 2%"></a>
+		</div>
 		<div class="logo cf">
-			<h1><a href="index.html"><img src="images/logo.jpg" alt="East Kew United FC"></a></h1>
+		
+			<a href="index.html"><img src="images/eklogo.png" id="mainlogo" alt="East Kew United FC"></a>
 		</div>
 
 		<div class="menu cf">
 			<nav>
 				<ul>
 					<li><a href="fixtures.html"><h4>Fixtures</h4></a></li>
-					<li><a href="club.html"><h4>Our Club</h4></a></li>
+					<li><a href="club.html"><h4>Club History</h4></a></li>
 					<li><a href="gallery.html"><h4>Gallery</h4></a></li>
 					<li><a href="players.html"><h4>Player Profiles</h4></a></li>
 					<li><a href="contacts.html"><h4>Contact Us</h4></a></li>
@@ -30,21 +35,185 @@
 				</ul>
 			</nav>
 		</div>
+		<div id="mobilemenu">
+			<div style="left: 0px; transition: left 300ms ease 0s;" class="push">
+				<nav style="position: fixed; top: 0px; bottom: 0px; height: 100%; left: -70%; width: 70%; transition: left 300ms ease 0s;" id="menu" class="panel" role="navigation">
+
+					<ul class="mobilepanel">
+						
+						<img src="images/eklogo.png" style="width:40%;margin-left:30%;">
+						<li style="border-bottom: 2px solid white"></li>
+						<a href="index.html"><li class="page" style="margin-top: 5%">Home</li></a>
+						<a href="fixtures.html"><li class="page">Fixtures</li></a>
+						<a href="club.html"><li class="page">Club History</li></a>
+						<a href="gallery.html"><li class="page">Gallery</li></a>
+						<a href="players.html"><li class="page">Player Profiles</li></a>
+						<a href="contacts.html"><li class="page">Contact Us</li></a>
+						<a href="sponsors.html"><li class="page">Our Sponsors</li></a>
+						<a href="#" class="menu-link"><li style="padding-top: 10%">Close menu X</li></a>
+					</ul>
+				</nav>
+			</div>	
+		</div>
 	</header>
 	<div class="content">
+
 	
+	<div class="fixturelisting">
+		<h1>2016 Season Fixtures</h1>
+		<br />
+		<h2 style="font-weight: bold;text-align: center;">Premiers</h2><br>
+		<table>	
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid black;padding: 5px;">Date</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">Versus</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid black;padding: 5px;">Venue</td>
+				</tr>
+				<!-- <tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">May 22 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">St Albans Gospic Bears</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr> -->
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 5 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">St Albans Vukovar</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 19 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Barnstoneworth United</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 26 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Dandenong Victory F.C.</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 3 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Albert Park Spiders</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 10 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">NK Bunker</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 17 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Dandenong Youth United F.C.</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 31 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">H.N.K. Mostar Saints</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">August 7 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">St Albans Gospic Bears</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">August 21 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">St Albans Vukovar</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+			</table>
+			<br /><br />
+			<h2 style="font-weight: bold;text-align: center;">Over 35s</h2>
+			<br />
+			<table>	
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid black;padding: 5px;">Date</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">Versus</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid black;padding: 5px;">Venue</td>
+				</tr>
+				<!-- <tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">May 22 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">St Albans Gospic Bears</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr> -->
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 5 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">South Park Rangers</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 19 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Maidstone United F.C.</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">June 26 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Alphington</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 3 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Barnstoneworth United</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 10 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Thornbury United</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 17 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">South Park Rangers</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">July 31 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Maidstone United F.C.</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">August 7 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Alphington</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">August 14 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Thornbury United</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Home</td>
+				</tr>
+				<tr>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">August 21 2016</td>
+					<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">Maidstone United F.C.</td>
+					<td style="width:150px;font-weight: bold;border: 2px solid grey;padding: 5px;">Away</td>
+				</tr>
+			</table>
+		</div>
+	
+
+		<div class="social cf">
+			<ul>
+				<li><a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><img src="images/instagram.png" id="instalogo"></a>
+					<a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><p class="socialtext" style="font-size:0.8rem">Follow us on Instagram</p></a></li>
+				<li><a href="https://www.facebook.com/EastKewUnited/"><img src="images/facebook.png" id="fblogo"></a>
+					<a href="https://www.facebook.com/EastKewUnited/"><p class="socialtext" style="font-size:0.8rem">Connect with us on Facebook</p></a></li>
+				<li><a href="https://eastkewunitedsc.teamapp.com/"><img src="images/teamapp.jpg" id="teamapplogo"></a>
+					<a href="https://eastkewunitedsc.teamapp.com/"><p class="socialtext" style="font-size:0.8rem">Join our TeamApp</p></a></li>
+			</ul>
+		</div>
 	</div>
 	<footer>
 		<div class="sponsors">
 			<p>PROUDLY SPONSORED BY</p><br>
-			<a href="#"><img src="images/BWM.jpg"></a>
+			<a href="http://www.belfordwm.com.au/"><img src="images/BWM.jpg"></a>
 		</div>
 
 		<div class="credit">
-			<p style="font-size: 0.8rem">Site design and development by SimplyBeautiful.site</p>
+			<p style="font-size: 0.8rem">Site design and development by <br /><img src="images/simply.png" id="simplylogo" alt="SimplyBeautiful.site"></p>
 		</div>
 	</footer>
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
 </body>
 </html>

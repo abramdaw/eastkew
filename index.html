@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel = "stylesheet" href = "css/reset.css"/>
 	<link rel = "stylesheet" href = "css/style.css"/>
 	<link href="css/sldrstyles.css" rel="stylesheet"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
@@ -18,11 +17,11 @@
 <div class="container">
 	<header>
 		<div class="cf" id="mobileMenuBtn">
-				<a href="#" class="menu-link"><img src="images/menu.png" id="menulogo" style="width: 5%;float: left;padding: 2%"></a>
+				<a href="#" class="menu-link"><img src="images/menu.jpg" id="menulogo" style="width: 20%;float: left;padding: 2%"></a>
 		</div>
 		<div class="logo cf">
 		
-			<h1><a href="index.html"><img src="images/logo.png" id="mainlogo" alt="East Kew United FC"></a></h1>
+			<a href="index.html"><img src="images/eklogo.png" id="mainlogo" alt="East Kew United FC"></a>
 		</div>
 
 		<div class="menu cf">
@@ -43,22 +42,23 @@
 
 					<ul class="mobilepanel">
 						
-						<li><img src="images/logo.png" style="width:40%;margin:0 auto;"></li>
-						<li>East Kew United</li>
-						<a href="index.html"><li class="page">Home</li></a>
+						<img src="images/eklogo.png" style="width:40%;margin-left:30%;">
+						<li style="border-bottom: 2px solid white"></li>
+						<a href="index.html"><li class="page" style="margin-top: 5%">Home</li></a>
 						<a href="fixtures.html"><li class="page">Fixtures</li></a>
 						<a href="club.html"><li class="page">Club History</li></a>
 						<a href="gallery.html"><li class="page">Gallery</li></a>
 						<a href="players.html"><li class="page">Player Profiles</li></a>
 						<a href="contacts.html"><li class="page">Contact Us</li></a>
 						<a href="sponsors.html"><li class="page">Our Sponsors</li></a>
-
+						<a href="#" class="menu-link"><li style="padding-top: 10%">Close menu X</li></a>
 					</ul>
 				</nav>
 			</div>	
 		</div>
 	</header>
 	<div class="content">
+
 	<div id="slider">
 		<div class="stage">
 
@@ -69,6 +69,8 @@
 					<li class="elmnt-three"><div class=""><div class="wrap"><img src="images/bigair.jpg" width="250" height="140"></div></div></li>
 					<li class="elmnt-four"><div class=""><div class="wrap"><img src="images/header.jpg" width="250" height="140"></div></div></li>
 					<li class="elmnt-five"><div class=""><div class="wrap"><img src="images/strike.jpg" width="250" height="140"></div></div></li>
+					<li class="elmnt-six"><div class=""><div class="wrap"><img src="images/1985team.jpg" width="250" height="140"></div></div></li>
+					<li class="elmnt-seven"><div class=""><div class="wrap"><img src="images/vets2016.jpg" width="250" height="140"></div></div></li>
 				</ul>
 			</div>
 
@@ -82,10 +84,12 @@
 		 <div><p><small>Catching some big air</small></p></div>
 		 <div><p><small>On me head, son!</small></p></div>
 		 <div><p><small>He shoots...</small></p></div>
+		 <div><p><small>Our 1985 Premier team</small></p></div>
+		 <div><p><small>Vets vs Thornbury April 2016</small></p></div>
 		</div>
 
 		<ul class="selectors">
-			<li class="focalPoint"><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li>
+			<li class="focalPoint"><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li>
 		</ul>
 
 		<button class="sldr-prv sldr-nav prev">Prev</button>
@@ -94,34 +98,48 @@
 		<div class="clear"></div>
 
 	</div>
-	</div>
+	<div class="welcometext">
+		<h1 id="welcome">Welcome to the East Kew United Soccer Club homepage</h1>
+		<p> East Kew United Soccer Club is a family oriented club with over 30 years of history in the Kew area. Established in 1985 and based at the Willsmere Park, East Kew, we aim to strike a balance between competitiveness, healthy sport and social enjoyment.</p><br />
+		<p>Our key principles are:</p><br />
+		<ul>
+		<li>Treat people involved in our sporting activities with courtesy, respect and proper regard for their rights.</li>
+	    <li>Support the club for members and community well being.</li>
+	    <li>Recognising we are part of the community, behave in a manner that does upholds standing and reputation of the club.</li>
+		</ul><br />
+		<p>Our family based club is as much about social interaction as competition. With many of us coming to the end of our playing careers, we welcome new members, young and old to join our club.</p><br />
+		<p>We participate in the Victorian Amateur Soccer Federation  with our games scheduled on Sunday mornings and training on Wednesday evenings.</p><br />
+		<p>For further information or to join our club please <a href="contacts.html">contact a member of our committee.</a></p>
+		</div>
+	<!-- </div> -->
 		<div class="fixture cf">
-			<p>OUR NEXT GAME:</p><br>
+			<p>OUR NEXT PREMIER LEAGUE GAME:</p><br>
 			<p id="match"></p><br>
 			<p>VS.</p><br>
 			<p id="team"></p><br>
-			<p id="venue"></p>
+			<p id="venue"></p><br>
+			<p>And the over 35s team play <span id="35versus" style="font-weight: bold;"></span> on <span id="35date" style="font-weight: bold;"></span> at <span id="35venue" style="font-weight: bold;"></span>.</p>
 		</div>
 
 		<div class="social cf">
 			<ul>
-				<li><a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><img src="images/instagram.jpg" id="instalogo"></a>
-					<a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><p style="font-size:0.8rem">Follow us on Instagram</p></a></li>
+				<li><a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><img src="images/instagram.png" id="instalogo"></a>
+					<a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><p class="socialtext" style="font-size:0.8rem">Follow us on Instagram</p></a></li>
 				<li><a href="https://www.facebook.com/EastKewUnited/"><img src="images/facebook.png" id="fblogo"></a>
-					<a href="https://www.facebook.com/EastKewUnited/"><p style="font-size:0.8rem">Connect with us on Facebook</p></a></li>
+					<a href="https://www.facebook.com/EastKewUnited/"><p class="socialtext" style="font-size:0.8rem">Connect with us on Facebook</p></a></li>
 				<li><a href="https://eastkewunitedsc.teamapp.com/"><img src="images/teamapp.jpg" id="teamapplogo"></a>
-					<a href="https://eastkewunitedsc.teamapp.com/"><p style="font-size:0.8rem">Join our TeamApp</p></a></li>
+					<a href="https://eastkewunitedsc.teamapp.com/"><p class="socialtext" style="font-size:0.8rem">Join our TeamApp</p></a></li>
 			</ul>
 		</div>
 	</div>
 	<footer>
 		<div class="sponsors">
 			<p>PROUDLY SPONSORED BY</p><br>
-			<a href="#"><img src="images/BWM.jpg"></a>
+			<a href="http://www.belfordwm.com.au/"><img src="images/BWM.jpg"></a>
 		</div>
 
 		<div class="credit">
-			<p style="font-size: 0.8rem">Site design and development by SimplyBeautiful.site</p>
+			<p style="font-size: 0.8rem">Site design and development by <br /><img src="images/simply.png" id="simplylogo" alt="SimplyBeautiful.site"></p>
 		</div>
 	</footer>
 </div>
@@ -223,16 +241,16 @@ if (endseason > today) {
 }
 
 var matches = [
-	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463788800000},
-	{when: "June 5 2016", versus: "St Albans Vukovar", venue: "Home", expires: 1464998400000},
-	{when: "June 19 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1465788800000},
-	{when: "June 26 2016", versus: "Dandenong Victory F.C.", venue: "Home", expires: 1465788800000},
-	{when: "July 3 2016", versus: "Albert Park Spiders", venue: "Away", expires: 1465788800000},
-	{when: "July 10 2016", versus: "NK Bunker", venue: "Home", expires: 1465788800000},
-	{when: "July 17 2016", versus: "Dandenong Youth United F.C.", venue: "Away", expires: 1465788800000},
-	{when: "July 31 2016", versus: "H.N.K. Mostar Saints", venue: "Home", expires: 1465788800000},
-	{when: "August 7 2016", versus: "St Albans Gospic Bears", venue: "Away", expires: 1465788800000},
-	{when: "August 21 2016", versus: "St Albans Vukovar", venue: "Away", expires: 1465788800000},
+	{when: "May 22 2016", versus: "St Albans Gospic Bears", venue: "Home", expires: 1463925600000},
+	{when: "June 5 2016", versus: "St Albans Vukovar", venue: "Home", expires: 1465135200000},
+	{when: "June 19 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1466344800000},
+	{when: "June 26 2016", versus: "Dandenong Victory F.C.", venue: "Home", expires: 1466949600000},
+	{when: "July 3 2016", versus: "Albert Park Spiders", venue: "Away", expires: 1467554400000},
+	{when: "July 10 2016", versus: "NK Bunker", venue: "Home", expires: 1468159200000},
+	{when: "July 17 2016", versus: "Dandenong Youth United F.C.", venue: "Away", expires: 1468764000000},
+	{when: "July 31 2016", versus: "H.N.K. Mostar Saints", venue: "Home", expires: 1469973600000},
+	{when: "August 7 2016", versus: "St Albans Gospic Bears", venue: "Away", expires: 1470578400000},
+	{when: "August 21 2016", versus: "St Albans Vukovar", venue: "Away", expires: 1471788000000},
 	];
 
 var utctoday = Date.now();
@@ -249,6 +267,35 @@ for (var i=0; i < matches.length; i++){
 		document.getElementById("match").innerHTML = "Error";
 		document.getElementById("team").innerHTML = "Error";
 		document.getElementById("venue").innerHTML = "Error";
+	};
+}
+var thirtymatches = [
+	{when: "June 5 2016", versus: "South Park Rangers", venue: "Home", expires: 1465135200000},
+	{when: "June 19 2016", versus: "Maidstone United F.C.", venue: "Away", expires: 1466344800000},
+	{when: "June 26 2016", versus: "Alphington", venue: "Away", expires: 1466949600000},
+	{when: "July 3 2016", versus: "Barnstoneworth United", venue: "Away", expires: 1467554400000},
+	{when: "July 10 2016", versus: "Thornbury United", venue: "Home", expires: 1468159200000},
+	{when: "July 17 2016", versus: "South Park Rangers", venue: "Away", expires: 1468764000000},
+	{when: "July 31 2016", versus: "Maidstone United F.C.", venue: "Home", expires: 1469973600000},
+	{when: "August 7 2016", versus: "Alphington", venue: "Away", expires: 1470578400000},
+	{when: "August 14 2016", versus: "Thornbury United", venue: "Home", expires: 1469973600000},
+	{when: "August 21 2016", versus: "Maidstone United F.C.", venue: "Away", expires: 1471788000000},
+	];
+
+var utctoday = Date.now();
+console.log(utctoday);
+
+for (var i=0; i < thirtymatches.length; i++){
+
+	if (utctoday < thirtymatches[i].expires) {
+		document.getElementById("35date").innerHTML = thirtymatches[i].when;
+		document.getElementById("35versus").innerHTML = thirtymatches[i].versus;
+		document.getElementById("35venue").innerHTML = thirtymatches[i].venue;
+		break;
+	} else {
+		document.getElementById("35date").innerHTML = "Error";
+		document.getElementById("35versus").innerHTML = "Error";
+		document.getElementById("35venue").innerHTML = "Error";
 	};
 }
 </script>

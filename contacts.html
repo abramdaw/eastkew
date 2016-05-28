@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel = "stylesheet" href = "css/reset.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel = "stylesheet" href = "css/style.css"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="bigSlide.js" type="text/javascript" charset="utf-8"></script>
 	<title>Contacts page - East Kew United</title>
 	<meta name="description" content="East Kew United Football Club Home Page">
 	<meta name="keywords" content="east,kew,united,football,club,soccer,melbourne">
@@ -14,15 +15,19 @@
 <body>
 <div class="container">
 	<header>
+		<div class="cf" id="mobileMenuBtn">
+				<a href="#" class="menu-link"><img src="images/menu.jpg" id="menulogo" style="width: 20%;float: left;padding: 2%"></a>
+		</div>
 		<div class="logo cf">
-			<h1><a href="index.html"><img src="images/logo.jpg" alt="East Kew United FC"></a></h1>
+		
+			<a href="index.html"><img src="images/eklogo.png" id="mainlogo" alt="East Kew United FC"></a>
 		</div>
 
 		<div class="menu cf">
 			<nav>
 				<ul>
 					<li><a href="fixtures.html"><h4>Fixtures</h4></a></li>
-					<li><a href="club.html"><h4>Our Club</h4></a></li>
+					<li><a href="club.html"><h4>Club History</h4></a></li>
 					<li><a href="gallery.html"><h4>Gallery</h4></a></li>
 					<li><a href="players.html"><h4>Player Profiles</h4></a></li>
 					<li><a href="contacts.html"><h4>Contact Us</h4></a></li>
@@ -30,22 +35,161 @@
 				</ul>
 			</nav>
 		</div>
-		
+		<div id="mobilemenu">
+			<div style="left: 0px; transition: left 300ms ease 0s;" class="push">
+				<nav style="position: fixed; top: 0px; bottom: 0px; height: 100%; left: -70%; width: 70%; transition: left 300ms ease 0s;" id="menu" class="panel" role="navigation">
+
+					<ul class="mobilepanel">
+						
+						<img src="images/eklogo.png" style="width:40%;margin-left:30%;">
+						<li style="border-bottom: 2px solid white"></li>
+						<a href="index.html"><li class="page" style="margin-top: 5%">Home</li></a>
+						<a href="fixtures.html"><li class="page">Fixtures</li></a>
+						<a href="club.html"><li class="page">Club History</li></a>
+						<a href="gallery.html"><li class="page">Gallery</li></a>
+						<a href="players.html"><li class="page">Player Profiles</li></a>
+						<a href="contacts.html"><li class="page">Contact Us</li></a>
+						<a href="sponsors.html"><li class="page">Our Sponsors</li></a>
+						<a href="#" class="menu-link"><li style="padding-top: 10%">Close menu X</li></a>
+					</ul>
+				</nav>
+			</div>	
+		</div>
 	</header>
 	<div class="content">
-	
+	<div class="joinus">
+		<h1>Join East Kew United - Have fun, get fit and be social!</h1>
+		<p style="text-align: center;">We are a fun, family oriented side and we are always open to new talent - young or old, to join our club.</p>
+		<p style="text-align: center;">If you are interested in training with us and making a team - get in touch today!</p>
+		<div class="contactformb cf"> 
+			<form action="http://formspree.io/chris@theloyaltygroup.com.au" method="POST">
+				<fieldset>
+					<LEGEND>Contact East Kew United now!</LEGEND>
+					<label for="firstName">Your name</label>
+					<input type="text" name="firstName" id="firstName" placeholder="First" class="names" />
+					<input type="text" name="lastName" id="lastName" placeholder="Last" class="names" />
+					<label for="phone">Phone Number</label>
+					<input type="tel" name="phone" id="phone" class="names" />
+					<label for="email" class="hidden">E-mail Address</label>
+					<input type="email" name="_replyto" id="email" class="details" />
+				</fieldset>
+				<fieldset>
+					<LEGEND>Your message</LEGEND>
+					<label for="enquiry">Type of enquiry</label>
+						<select>
+							<option value="A">Interest in joining the team</option>
+							<option value="B">Sponsorship enquiry</option>
+							<option value="C">General Feedback or Question</option>
+						</select> 
+					
+					
+					<input type="textarea" name="message" id="message" class="bigone" />		
+				</fieldset>
+				<input type="hidden" name="_next" value="thanks.html" />
+				<input type="hidden" name="_subject" value="Enquiry from website" />
+				<input type="text" name="_gotcha" style="display:none" />
+				<input type="submit" id="submitbtn" name="button" class="button" value="Submit" />
+			</form>
+			</div>
+	</div>
+	<div class="committee">
+	<h2>2016 COMMITTEE</h2><br />
+		<table>	
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">Position</td>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">Name</td>
+				<td style="width:150px;font-weight: bold;border: 2px solid black;padding: 5px;">Contact number</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">PRESIDENT</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">Chris Doufas Jnr</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;">0412 582 122</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">TREASURER</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">Phill Bewick</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;">0432 216 205</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">SECRETARY</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">Arthur Parisis</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;">0419 123 048</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">VIC SOCCER LIAISON</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">George Markopoulos</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;">0411 816 866</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">PREMIER LEAGUE COACH</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">Alex Filippis</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;"></td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid grey;padding: 5px;">OVER 35’S COACH</td>
+				<td style="width:250px;border: 2px solid grey;padding: 5px;">George Markopoulos</td>
+				<td style="width:150px;border: 2px solid grey;padding: 5px;"></td>
+			</tr>
+		</table><br />
+	<h2>OTHER COMMITTEE MEMBERS:</h2><br />
+		<table>	
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">EVENT MANAGEMENT</td>
+				<td style="width:250px;;border: 2px solid black;padding: 5px;">Ross Paraskevas</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;"></td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Matthew Szymula</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">WEBSITE</td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Alan Zhao</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">COMMUNICATION & SOCIAL MEDIA MANAGER</td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Alex Mills</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">FUNDRAISING & SPONSORSHIP</td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Peter Noblet</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;"></td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Edmondo Rosini</td>
+			</tr>
+			<tr>
+				<td style="width:250px;font-weight: bold;border: 2px solid black;padding: 5px;">TEAM MANAGEMENT</td>
+				<td style="width:250px;border: 2px solid black;padding: 5px;">Jovan Stojanovic</td>
+			</tr>
+		</table>
+		
+	</div>
+		<div class="social cf">
+			<ul>
+				<li><a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><img src="images/instagram.png" id="instalogo"></a>
+					<a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><p class="socialtext" style="font-size:0.8rem">Follow us on Instagram</p></a></li>
+				<li><a href="https://www.facebook.com/EastKewUnited/"><img src="images/facebook.png" id="fblogo"></a>
+					<a href="https://www.facebook.com/EastKewUnited/"><p class="socialtext" style="font-size:0.8rem">Connect with us on Facebook</p></a></li>
+				<li><a href="https://eastkewunitedsc.teamapp.com/"><img src="images/teamapp.jpg" id="teamapplogo"></a>
+					<a href="https://eastkewunitedsc.teamapp.com/"><p class="socialtext" style="font-size:0.8rem">Join our TeamApp</p></a></li>
+			</ul>
+		</div>
 	</div>
 	<footer>
 		<div class="sponsors">
 			<p>PROUDLY SPONSORED BY</p><br>
-			<a href="#"><img src="images/BWM.jpg"></a>
+			<a href="http://www.belfordwm.com.au/"><img src="images/BWM.jpg"></a>
 		</div>
 
 		<div class="credit">
-			<p style="font-size: 0.8rem">Site design and development by SimplyBeautiful.site</p>
+			<p style="font-size: 0.8rem">Site design and development by <br /><img src="images/simply.png" id="simplylogo" alt="SimplyBeautiful.site"></p>
 		</div>
 	</footer>
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
 </body>
 </html>

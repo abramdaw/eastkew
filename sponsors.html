@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel = "stylesheet" href = "css/reset.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel = "stylesheet" href = "css/style.css"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="bigSlide.js" type="text/javascript" charset="utf-8"></script>
 	<title>Our sponsors page - East Kew United</title>
 	<meta name="description" content="East Kew United Football Club Home Page">
 	<meta name="keywords" content="east,kew,united,football,club,soccer,melbourne">
@@ -14,15 +15,19 @@
 <body>
 <div class="container">
 	<header>
+		<div class="cf" id="mobileMenuBtn">
+				<a href="#" class="menu-link"><img src="images/menu.jpg" id="menulogo" style="width: 20%;float: left;padding: 2%"></a>
+		</div>
 		<div class="logo cf">
-			<h1><a href="index.html"><img src="images/logo.jpg" alt="East Kew United FC"></a></h1>
+		
+			<a href="index.html"><img src="images/eklogo.png" id="mainlogo" alt="East Kew United FC"></a>
 		</div>
 
 		<div class="menu cf">
 			<nav>
 				<ul>
 					<li><a href="fixtures.html"><h4>Fixtures</h4></a></li>
-					<li><a href="club.html"><h4>Our Club</h4></a></li>
+					<li><a href="club.html"><h4>Club History</h4></a></li>
 					<li><a href="gallery.html"><h4>Gallery</h4></a></li>
 					<li><a href="players.html"><h4>Player Profiles</h4></a></li>
 					<li><a href="contacts.html"><h4>Contact Us</h4></a></li>
@@ -30,21 +35,120 @@
 				</ul>
 			</nav>
 		</div>
+		<div id="mobilemenu">
+			<div style="left: 0px; transition: left 300ms ease 0s;" class="push">
+				<nav style="position: fixed; top: 0px; bottom: 0px; height: 100%; left: -70%; width: 70%; transition: left 300ms ease 0s;" id="menu" class="panel" role="navigation">
+
+					<ul class="mobilepanel">
+						
+						<img src="images/eklogo.png" style="width:40%;margin-left:30%;">
+						<li style="border-bottom: 2px solid white"></li>
+						<a href="index.html"><li class="page" style="margin-top: 5%">Home</li></a>
+						<a href="fixtures.html"><li class="page">Fixtures</li></a>
+						<a href="club.html"><li class="page">Club History</li></a>
+						<a href="gallery.html"><li class="page">Gallery</li></a>
+						<a href="players.html"><li class="page">Player Profiles</li></a>
+						<a href="contacts.html"><li class="page">Contact Us</li></a>
+						<a href="sponsors.html"><li class="page">Our Sponsors</li></a>
+						<a href="#" class="menu-link"><li style="padding-top: 10%">Close menu X</li></a>
+					</ul>
+				</nav>
+			</div>	
+		</div>
 	</header>
 	<div class="content">
 	
+	<h1>East Kew United Soccer Club would like to thank the following sponsors for their support.</h1>
+	<p style="text-align: center;">To find out more or get in touch with any of these businesses, just click. Be sure to mention East Kew when you call!</p>
+	<h3>Our major sponsor:</h3>
+	<div class="spnsrboxes">
+		<a href="http://www.belfordwm.com.au/"><div class="mainspnsr">
+			<img src="images/BWM.jpg">
+			<h3>Belford Wealth Management</h3>
+			<p>Belford Wealth Management provides a comprehensive suite of wealth planning services in the areas of:</p>
+			<ul>
+				<li>Investment portfolio management </li>
+				<li>Superannuation and retirement planning</li>
+				<li>Life, income protection, trauma & disability insurance</li>
+				<li>Estate planning considerations</li>
+				<li>Wealth creation</li>
+			</ul>
+			<p>We provide advice on a comprehensive basis covering all the areas above, or, we can provide advice on a specific area only – whatever suits your requirements.</p>
+			<p>Our advisers are authorized representatives of Charter Financial Planning, who is responsible for their conduct in providing these services.</p>
+		</div></a>
+	</div><br />
+	
+	<h3>Our executive sponsors:</h3>
+	<div class="spnsrboxes">
+		<div class="section group">
+			<div class="col span_1_of_2 spnsr"><a href="http://www.buildingengineering.com.au/">
+			<img src="images/bldglogo.jpg">
+			<h3>Building Engineering</h3>
+			<p>Building Engineering offers a comprehensive suite of construction services.</p>
+			</a></div>
+			<div class="col span_1_of_2  spnsr"><a href="http://www.theloyaltygroup.com.au/">
+			<img src="images/loyalty.jpg">
+			<h3>The Loyalty Group </h3>
+			<p>The Loyalty Group is a well established Loyalty Marketing Company specialising in the development and management of successful Customer Loyalty Reward programs.</p>
+			</a></div>
+		</div>
+		<div class="section group">
+			<div class="col span_1_of_2 spnsr"><a href="http://www.thefishmarket.net.au/">
+			<img src="images/FishMarket.jpg">
+			<h3>The Fish Market Burger Bar and Grill</h3>
+			<p>Dine In, Take Away or Cook at Home. <br />272 Bridge Rd, Richmond 3121</p>
+			</a></div>
+			<div class="col span_1_of_2 spnsr"><a href="http://www.previewproperty.com.au/">
+			<img src="images/preview.jpg">
+			<h3>Preview Property</h3>
+			<p>For many years Preview Property has been quietly developing some of Melbourne’s best boutique residential projects. Master smart investing with us.</p>
+			</a></div>
+		</div>
+		<div class="section group">
+			<div class="col span_1_of_2 spnsr"><a href="http://www.omegacorp.com.au/">
+			<img src="images/omega.jpg">
+			<h3>Omega Security Solutions</h3>
+			<p>Omega Security Solutions is a family business with a proud heritage and a dedication to providing clients with the latest in high security solutions.</p>
+			</a></div>
+			<div class="col span_1_of_2 spnsr"><a href="http://www.ironeagle.com.au/">
+			<img src="images/shilmon.jpg">
+			<h3>Shilmon</h3>
+			<p>Iron Eagle was established in 1996 as a supplier of domestic metal goods. Since then our business has been transformed as a specialist in steel fabrication and metal work for commercial and industrial applications.</p>
+			</a></div>
+		</div>
+		<div class="section group">
+			<div class="col span_1_of_2 spnsr"><a href="http://www.ebdigitalworks.com/ebdigita/Home.html">
+			<img src="images/EBdigital.png">
+			<h3>EB Digital Works</h3>
+			<p>EB Digital Works specialises in large format digital printing. We provide specialist advice on large format printing mediums and installations to retail, business and consumers.</p>
+		</a></div>
+	</div>
+		<div class="social cf">
+			<ul>
+				<li><a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><img src="images/instagram.png" id="instalogo"></a>
+					<a href="https://www.instagram.com/east_kew_olympiakos_united_sc/?hl=en"><p class="socialtext" style="font-size:0.8rem">Follow us on Instagram</p></a></li>
+				<li><a href="https://www.facebook.com/EastKewUnited/"><img src="images/facebook.png" id="fblogo"></a>
+					<a href="https://www.facebook.com/EastKewUnited/"><p class="socialtext" style="font-size:0.8rem">Connect with us on Facebook</p></a></li>
+				<li><a href="https://eastkewunitedsc.teamapp.com/"><img src="images/teamapp.jpg" id="teamapplogo"></a>
+					<a href="https://eastkewunitedsc.teamapp.com/"><p class="socialtext" style="font-size:0.8rem">Join our TeamApp</p></a></li>
+			</ul>
+		</div>
 	</div>
 	<footer>
 		<div class="sponsors">
 			<p>PROUDLY SPONSORED BY</p><br>
-			<a href="#"><img src="images/BWM.jpg"></a>
+			<a href="http://www.belfordwm.com.au/"><img src="images/BWM.jpg"></a>
 		</div>
 
 		<div class="credit">
-			<p style="font-size: 0.8rem">Site design and development by SimplyBeautiful.site</p>
+			<p style="font-size: 0.8rem">Site design and development by <br /><img src="images/simply.png" id="simplylogo" alt="SimplyBeautiful.site"></p>
 		</div>
 	</footer>
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
 </body>
 </html>

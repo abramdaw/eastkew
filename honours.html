@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel = "stylesheet" href = "css/reset.css"/>
 	<link rel = "stylesheet" href = "css/style.css"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="bigSlide.js" type="text/javascript" charset="utf-8"></script>
 	<title>Roll of honour page - East Kew United</title>
 	<meta name="description" content="East Kew United Football Club Home Page">
 	<meta name="keywords" content="east,kew,united,football,club,soccer,melbourne">
@@ -14,6 +14,9 @@
 <body>
 <div class="container">
 	<header>
+	<div class="cf" id="mobileMenuBtn">
+				<a href="#" class="menu-link"><img src="images/menu.jpg" id="menulogo" style="width: 20%;float: left;padding: 2%"></a>
+		</div>
 		<div class="logo cf">
 			<h1><a href="index.html"><img src="images/logo.jpg" alt="East Kew United FC"></a></h1>
 		</div>
@@ -37,7 +40,7 @@
 	<footer>
 		<div class="sponsors">
 			<p>PROUDLY SPONSORED BY</p><br>
-			<a href="#"><img src="images/BWM.jpg"></a>
+			<a href="http://www.belfordwm.com.au/"><img src="images/BWM.jpg"></a>
 		</div>
 
 		<div class="credit">
@@ -45,6 +48,10 @@
 		</div>
 	</footer>
 </div>
-
+<script>
+    $(document).ready(function() {
+        $('.menu-link').bigSlide();
+    });
+</script>
 </body>
 </html>
